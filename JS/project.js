@@ -1,31 +1,37 @@
-const modal= document.getElementById("modal");
-const onsummit= document.getElementById("onsubmmit");
-const closemodal= document.getelementbyid("closemodal");
+const modal = document.getElementById("modal");
+const onSummit = document.getElementById("onSubmmit");
+const closeModal = document.getElementById("closeModal");
 
-onsummit.addEventListener("submit",function (){
-    any
-    modal.style.display="flex";
-    Event.preventdeault();
-});
-closemodal.addEventListener("click",()=>{
-    modal.style.display="none";
+onSummit.addEventListener("submit", () => {
+  modal.style.display = "flex";
+  event.preventDefault();
 });
 
-function addtask(){
-    const taskinput=document.getElementById('taskinput');
-    const tasklist=document.getElementById('tasklist');
-    if(taskinput.ariaValueMax.trim()==='') {
-        alert('please enter a task.');
-        return;
-    }
-};
-const li=document.createElement('li');
-li.innerHTML=`
-${taskinput.value}
-<button class="delete-btn" onclick="deletTask(this)">Delete</button>`;
-tasklist.appendChild(li);
-taskinput.value='';
-function deleteTask(button){
-    button.parentelement.remove();
+closeModal.addEventListener("click", () => {
+  modal.style.display = "none";
+});
+
+
+function addTask() {
+  const taskInput = document.getElementById('taskInput');
+  const taskList = document.getElementById('taskList');
+  
+  if (taskInput.value.trim() === '') {
+      alert('Please enter a task.');
+      return;
+      
+  };
+
+  const li = document.createElement('li');
+  li.innerHTML = `
+      ${taskInput.value}
+      <button class="delete-btn" onclick="deleteTask(this)">Delete</button>
+  `;
+  
+  taskList.appendChild(li);
+  taskInput.value = '';
 }
 
+function deleteTask(button) {
+  button.parentElement.remove();
+}
