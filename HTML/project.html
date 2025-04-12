@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>My Form</title>
+    <link rel="stylesheet" href="../CSS/project.css" />
+    <script src="../JS/project.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="generalContainer">
+      <section class="textBox">
+        <h1>Simple Task Manager</h1>
+        <p>
+          Stay organized and boost your productivity with our easy-to-use task manager. 
+          Create and manage your daily tasks with just a few clicks.
+        </p>
+      </section>
+      <section class="formBox">
+        <main class="freePop">Try it free 7 days then $20/mo. thereafter</main>
+        <form id="onSubmit" class="formBox">
+          <input type="text" placeholder="First Name" required />
+          <br />
+          <input type="text" placeholder="Last Name" required />
+          <br />
+          <input type="email" placeholder="Email Address" required />
+          <br />
+          <input type="password" placeholder="Password" required />
+          <br />
+          <button type="submit">Clain your Free Trial</button>
+        </form>
+      </section>
+
+      <!-- Modal Session -->
+
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <img src="../IMG/success.png" alt="success icon" />
+          <p>Your Free Trial Has been Sucessfully Claimed</p>
+          <!-- <button id="closeModal">Return to Form</button> -->
+          <a href="../HTML/task.html" class="button">Go to Tasks</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
